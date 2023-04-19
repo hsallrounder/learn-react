@@ -23,7 +23,7 @@ const Form = (props) => {
   const formEventHandler=(event)=>{
     event.preventDefault()  
 
-    props.addProduct({name,})
+    props.addProduct({name, price, imgUrl:url})
 
     console.log(name);
     console.log(price);
@@ -36,17 +36,17 @@ const Form = (props) => {
 
       <div>
         <label htmlFor='name'>Product Name</label>
-        <input onChange={nameChangeHandler} type='text' id='product' placeholder='name'></input>
+        <input onChange={nameChangeHandler} type='text' id='product' value={name} placeholder='name'></input>
       </div>
 
       <div>
         <label htmlFor='price'>Price</label>
-        <input onChange={priceChangeHandler} type='number' id='price' placeholder='price'></input>
+        <input onChange={priceChangeHandler} type='number' id='price' value={price} placeholder='price'></input>
       </div>
 
       <div>
         <label htmlFor='image'>Image Url</label>
-        <input onChange={urlChangeHandler} type='text' id='image' placeholder='image'></input>
+        <input onChange={urlChangeHandler} type='text' id='image' value={url} placeholder='image'></input>
       </div>
 
       <button> Add Product</button>

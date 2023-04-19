@@ -29,7 +29,7 @@ const ShoppingList = () => {
 
     const addProduct = (product) => {
 
-        return setProducts([...initialProducts,product])
+        return setProducts([...products,product])
 
     }
 
@@ -41,11 +41,9 @@ const ShoppingList = () => {
                 products.map((product) => {
 
                     return <Product name={product.name}
-                        price={product.price}
-                        image={product.imgUrl}
+                            price={product.price}
+                            image={product.imgUrl}
                     />
-
-
 
                 })
 
